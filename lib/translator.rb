@@ -40,7 +40,7 @@ def get_english_meaning(file, emoticon)
 
 
 def get_japanese_emoticon(file, emoticon)
-  lib = load_library('./lib/emoticons.yml')
+  lib = load_library(file)
   lib.each do |meaning, lang|
       return lang[:japanese] if lang[:english] == emoticon
   end
